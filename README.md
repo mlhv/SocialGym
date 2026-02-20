@@ -29,4 +29,35 @@ This entire 5-tier architecture is fully containerized. You can spin up the UI, 
 Duplicate the provided `.env.example` file, rename it to `.env`, and insert your OpenAI API key:
 ```bash
 cp .env.example .env
+```
 
+### 2. Launch the Cluster
+
+Ensure the Docker daemon is running on your machine, then execute:
+
+```bash
+docker-compose up --build -d
+```
+### 3. Access the Application
+
+Frontend UI: `http://localhost`
+
+Backend API: `http://localhost:8080`
+
+Note: The initial startup will take a few minutes as Docker resolves base images, Maven dependencies, and downloads the PyTorch NLP models.
+
+### 🛑 Teardown
+To spin down the cluster and wipe the database volumes, run:
+
+```Bash
+docker-compose down -v
+```
+
+### 📁 Project Structure
+`/frontend` - React application, WebSocket subscription logic, and UI components.
+
+`/backend` - Spring Boot server, JDBC JPA entities, and Kafka Producer configurations.
+
+`/ml-service` - Python consumer daemon, Hugging Face pipeline, and HTTP webhook caller.
+
+`docker-compose.yml` - Infrastructure orchestration mapping ports, networks, and environment variables.
