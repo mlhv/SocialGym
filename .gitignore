@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Mac system files
+.DS_Store
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# Backend
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# Python ML Service
+.venv/
