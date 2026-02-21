@@ -4,6 +4,9 @@ An event-driven, AI-powered conversational simulator built with a polyglot micro
 
 SocialGym provides a real-time chat interface where users can practice social scenarios (like debate, dating, or networking) with an AI agent. Behind the scenes, a decoupled machine learning pipeline performs real-time Natural Language Processing (NLP) sentiment analysis on the conversation without blocking the main application thread.
 
+### 🎥 Live Demo
+![SocialGym Demo](./assets/demo.gif)
+
 ## 🏗️ System Architecture
 
 ![SocialGym Architecture](./assets/architecture.png)
